@@ -1,16 +1,16 @@
 'use client'
 // import Affordable_Solution from '../../public/assets/images/Affordable_Solution.svg'
 import React, { useEffect, useState } from 'react';
-import connect_compare from '../../eln/public/assets/images/connect_compare.svg'
-import Affordable_Solution from '../../eln/public/assets/images/Affordable_Solution.svg'
-import save_compare from '../../eln/public/assets/images/save_compare.svg'
-import Ease_of_Transition from '../../eln/public/assets/images/Ease_of_Transition.svg'
-import Affordable_and_Scalable from '../../eln/public/assets/images/Affordable_and_Scalable.svg'
-import seamless_compare from '../../eln/public/assets/images/seamless_compare.svg'
-import Product_develop from '../../eln/public/assets/images/Product_develop.svg'
-import save_time_section_image from '../../eln/public/assets/images/save_time_section_image.svg'
-import Accelerate_collaboration from '../../eln/public/assets/images/Accelerate_collaboration.svg'
-import ideal_compare from '../../eln/public/assets/images/ideal_compare.svg'
+import connect_compare from '../public/assets/images/connect_compare.svg'
+import Affordable_Solution from '../public/assets/images/Affordable_Solution.svg'
+import save_compare from '../public/assets/images/save_compare.svg'
+import Ease_of_Transition from '../public/assets/images/Ease_of_Transition.svg'
+import Affordable_and_Scalable from '../public/assets/images/Affordable_and_Scalable.svg'
+import seamless_compare from '../public/assets/images/seamless_compare.svg'
+import Product_develop from '../public/assets/images/Product_develop.svg'
+import save_time_section_image from '../public/assets/images/save_time_section_image.svg'
+import Accelerate_collaboration from '../public/assets/images/Accelerate_collaboration.svg'
+import ideal_compare from '../public/assets/images/ideal_compare.svg'
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import icons
 
