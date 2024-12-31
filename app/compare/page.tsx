@@ -44,7 +44,7 @@ import Product_develop from '../../public/assets/images/Product_develop.svg'
 import wrong_icon from '../../public/assets/images/wrong_icon.svg'
 import compare_arrow from '../../public/assets/images/compare_arrow.svg'
 import LiteSlider from "@/components/liteslider";
-import ComapreSlide from "@/components/comapreslide";
+// import ComapreSlide from "@/components/comapreslide";
 
 
 export default function Scinote() {
@@ -588,7 +588,7 @@ return (
           
            <div className="hosting_title sec_title erp_title text-center">
           <h2 className="fw-bold text-center compare-sub pt_70">Grow better with Logilab ELN Lite</h2>
-          <ComapreSlide/>
+          {/* <ComapreSlide/> */}
         </div>
 
               
