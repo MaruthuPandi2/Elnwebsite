@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import dbos from '../../eln/public/assets/images/customers/hp.png'
-import e from '../../eln/public/assets/images/customers/megafine.svg'
-import hp from '../../eln/public/assets/images/customers/rudolphreserch.svg'
-import mbs from '../../eln/public/assets/images/customers/cpi.svg'
-import cipla from '../../eln/public/assets/images/customers/smtl.svg'
+import dbos from '../public/assets/images/customers/hp.png'
+import e from '../public/assets/images/customers/megafine.svg'
+import hp from '../public/assets/images/customers/rudolphreserch.svg'
+import mbs from '../public/assets/images/customers/cpi.svg'
+import cipla from '../public/assets/images/customers/smtl.svg'
 import Image from "next/image";
 
 var $ = require('jquery');

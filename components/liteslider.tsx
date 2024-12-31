@@ -5,7 +5,7 @@ import e from '../public/assets/images/customers/megafine.svg'
 import hp from '../public/assets/images/customers/rudolphreserch.svg'
 import mbs from '../public/assets/images/customers/cpi.svg'
 import cipla from '../public/assets/images/customers/smtl.svg'
-import mbss from '../../eln/public/assets/images/customers/bharati vidyapeeth.svg'
+import mbss from '../public/assets/images/customers/bharati vidyapeeth.svg'
 import Image from "next/image";
 
 var $ = require('jquery');
