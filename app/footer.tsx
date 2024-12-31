@@ -6,6 +6,7 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { GrYoutube } from "react-icons/gr";
 import Image from "next/image";
 // import elnlogofooter from '../../eln/public/assets/images/eln-logo.png'
+import elnlogofooter from '../../assets/images/eln-logo.png'
 import homefooterimag from '../../eln/public/assets/images/home_footer_imag.svg'
 import  Link  from 'next/link'
 const Footer = () => {
@@ -27,8 +28,8 @@ const Footer = () => {
                   <div className="footerLogo">
                     {/* <a href="index.html" className="f-logo"><img src="/images/Agaram_Technologies_Logo.svg" alt="Company Logo" /></a> */}
                     <Link className="footer_logo" href="/">
-                       <img src="../assets/images/eln_logo.svg" alt="logo" />
-                       {/* <Image src={elnlogofooter} className="img-fluid" alt="logo" /> */}
+                       {/* <img src="../assets/images/eln_logo.svg" alt="logo" /> */}
+                       <Image src={elnlogofooter} className="img-fluid" alt="logo" />
                     </Link>
                   </div>
 
