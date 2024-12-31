@@ -27,6 +27,7 @@ import Aarthi from '../../../public/assets/images/Aarthi.jpg'
 // import cpi from '../../eln/public/assets/images/customers/cpi.svg'
 import cpi from '../../../public/assets/images/customers/cpi.svg'
 import Footer from "@/app/footer";
+import Header from "@/components/header";
 function Customers() {
 
   const projectsData = [
@@ -55,6 +56,7 @@ function Customers() {
 
   return (
     <>
+    <Header/>
     <div className='about-us customers'>
      <div className="soltionbg security_banner_content  ">
           <div className="container">
@@ -69,10 +71,10 @@ function Customers() {
                     </p>
                     <div className="d-flex action_btn action_btn justify-content-center mt_40 bannerresolution_btn" data-wow-delay="0.6s">
                     <Link href="/contact-us" className="btn btn--white text-center">
-                    Contact Us
+                       Contact Us
                     </Link>
                     <Link href="/solution" className="btn btn--white mx-4 text-center">
-                    Explore Solutions
+                       Explore Solutions
                     </Link>
                 </div>                    
                   </div>
@@ -149,7 +151,7 @@ function Customers() {
           </Row>
         </Container>
       </div>
-      <div className="testimonial-slider-area section-space--ptb_60">
+      <div className="testimonial-slider-area section-space--ptb_60 customers">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

@@ -2,10 +2,13 @@
 import React from "react";
 import Footer from "../../footer";
 import Link from "next/link"; 
+import Header from "@/components/header";
 function RefundPolicy() { 
     
   return (
-    <div className="preloader-activate preloader-active open_tm_preloader">
+    <>
+    <Header/>
+      <div className="preloader-activate preloader-active open_tm_preloader">
       <div className="preloader-area-wrap">
         <div className="spinner d-flex justify-content-center align-items-center h-100">
           <div className="bounce1"></div>
@@ -105,6 +108,8 @@ function RefundPolicy() {
     </div>
     <Footer />
     </div>
+    </>
+  
   )
 }
 

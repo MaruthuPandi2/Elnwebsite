@@ -14,6 +14,7 @@ import  Link  from 'next/link'
 import cta2 from '../../../public/assets/images/cta2.svg' 
 import home_calender from '../../../public/assets/images/home_calender.svg'
 import LogilabELNwhite from '../../../public/assets/images/Logilab-ELN_white.svg'
+import Header from "@/components/header";
 export default function Research_Developement(){
 
   const { isSticky, nextSectionTop, lastContainerBottom, isHidden ,offset1, offset2, offset3,offset4,offset5 } = useScroll();
@@ -21,7 +22,7 @@ export default function Research_Developement(){
 return(
       <div>
 
-
+        <Header/>
         <div className="soltionbg research_acadmic-banner security_banner_content">
           <div className="container">
               <div className="row">

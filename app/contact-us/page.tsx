@@ -8,6 +8,7 @@ import LogilabELNwhite from '../../public/assets/images/Logilab-ELN_white.svg'
 import home_calender from '../../public/assets/images/home_calender.svg'
 import Image from "next/image";
 import  Link  from 'next/link'
+import Header from "@/components/header";
 function Contact() {
   
   useEffect(() => {
@@ -67,6 +68,7 @@ function Contact() {
 
   return (
     <div>
+      <Header/>
     <div className='about-us '>
      <div className="soltionbg security_banner_content ">
           <div className="container">

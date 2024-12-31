@@ -1,6 +1,5 @@
 "use client";
-import "../globals.css"
-import Footer from '../footer';
+// import Footer from '../footer';
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from 'react';
@@ -40,11 +39,13 @@ import Affordable_and_Scalable from '../../public/assets/images/Affordable_and_S
 import save_time_section_image from '../../public/assets/images/save_time_section_image.svg'
 import Ease_of_Transition from '../../public/assets/images/Ease_of_Transition.svg'
 import affordable_and_scalable from '../../public/assets/images/affordable_and_scalable.svg'
-import Product_develop from '../../public/assets/images/Product_develop.svg'
+import Product_develop_two from '../../public/assets/images/Product_develop_two.svg'
 import wrong_icon from '../../public/assets/images/wrong_icon.svg'
 import compare_arrow from '../../public/assets/images/compare_arrow.svg'
+import logowhite from '../../public/assets/images/eln_logo_white.svg';
 import LiteSlider from "@/components/liteslider";
 import ComapreSlide from "@/components/comapreslide";
+import Footer from "@/app/footer";
 
 
 export default function Scinote() {
@@ -72,8 +73,40 @@ return (
     <div className="compare-bg solutionmain security_banner_content">
       <div className="container ">   
         <div className="row ">
+            <div className="col-lg-8 col-md-6 col-4">
+            <div className="header__logo">
+                    <Link href="/">
+                      <Image src={logowhite} className="head-home-logo" width="160" 
+                      alt="Logilab ELN, an Electronic Laboratory Notebook that streamlines your 
+                      research and helps you achieve compliance to GLP and 21 CFR Part 11." />
+                    </Link>
+                  </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-8 mt-4">
+            <div className="header__actions--preview">
+                      <div className="header__actions">
+                        <div className="header__icons-wrapper header-right-inner" id="hidden-icon-wrapper">
+                          <div className="header-button downlode-btn ml-4 menu_for headermenu mb-1">
+
+                            <div className='getstart'>
+                               <Link href="https://logilabelnlite.azurewebsites.net/register" className="ht-btn ht-btn-md">Get Started</Link>
+                            </div>
+                            
+                            <div className='signin'>
+                              <Link href="/request-a-demo"  className="ht-btn ht-btn-md">Request Demo</Link>
+                            </div>
+                            
+                          </div>
+                        </div>
+ 
+                     
+                      </div>
+                    </div>
+          </div>
+
+
           <div className="col-lg-6  d-flex d-flex pt-5 compare-bg-mt">
-             <div className="solution_security_banner_content bannerresolution">
+           <div className="solution_security_banner_content bannerresolution">
                   <h1 className="wow fadeInUp pt-3" data-wow-delay="0.3s">
                   {/* <span className="over-compare">Why</span>  <Image src={Elnlitelogo} alt="lite" className="img-fluid w-25 px-2"/> <span className="over-compare">over</span> Scinote */}
                   Logilab ELN Lite: The Agile Choice Over Scinote 
@@ -123,7 +156,7 @@ return (
                     <div className="hr"></div>
                     <li className="pb-2">Quick Learning Curve </li>
                     <div className="hr"></div>
-                    <li className="pb-2">Integration with LIMS, SDMS Systems <br/> <span style={{fontSize:"13px"}}> (including Qualis LIMS, Logilab SDMS)</span> </li>
+                    <li className="pb-2">Integration with External Systems <br/> <span style={{fontSize:"13px"}}> (RS232, Qualis LIMS, Logilab SDMS, & REST API-based integrations)</span> </li>
                     <div className="hr"></div>
                     <li className="pb-2">Regulatory Compliance <br/> <span style={{fontSize:"13px"}}>(GLP, GxP,21 CFR Part 11, Eudralex Annex 11 etc.)</span> </li>
                     <div className="hr"></div>
@@ -256,11 +289,11 @@ return (
 
         <div className="bg-lblue mt-5">
       <div className="container">
-      <div className="mt-5">
+      <div className="mt-5 ">
       <div className="hosting_title sec_title erp_title text-center">
           <h2 className="fw-bold text-center compare-sub pt_70">LogiLab ELN Lite — Where Research Meets Innovation</h2>
         </div>
-                    <div className="row mt-5">
+                    <div className="row mt-5 Innovation-mt">
                         <div className="col-lg-6">
                         <h4 className="text-left fw-bold mb-4 py-3 ps-3 Teams_compare" style={{color:'#1163ea'}}>For Teams of all sizes</h4>
                         <div className="col-12 col-lg-12 mt-4 Teams_compare">
@@ -290,7 +323,7 @@ return (
                                 <Image src={Manage_Project} className="img-fluid" alt="" style={{width:"60px", height:'50px'}}/>
                                 </div>
                                 <div className="ms-3">
-                                    <h5 className="text-black fw-bold  ps-2 literesponsefont">Manage projects and tasks.</h5>
+                                    <h5 className="text-black fw-bold  ps-2 literesponsefont">Manage projects and tasks</h5>
                                     <p className="text-black-max-width ps-2 mt-2">
                                     Easily manage projects and tasks with configurable
                                     workflows. Use folders and files for quick access and better
@@ -322,7 +355,7 @@ return (
                         </div>
 
                       <div className="col-lg-6 smart-compare">
-                      <h4 className="text-left fw-bold mb-4 py-3 ps-3 Teams_compare" style={{color:'#1163ea',}}>Designed for Researchers & Academicians</h4>
+                      <h4 className="text-left fw-bold mb-4 py-3 ps-5 Teams_compare" style={{color:'#1163ea',}}>Designed for Researchers & Academicians</h4>
                       <div className="col-12 col-lg-12 ps-5 Teams_compare">   
                             <div className="d-flex flex-row align-items-center">
                             
@@ -565,7 +598,7 @@ return (
                                                       {/* Save Time Tab Content */}
                                                       <div className="tab-pane fade" id="v-pills-messages-3" role="tabpanel" aria-labelledby="v-pills-messages-tab-3">
                                                           {/* You can add corresponding content for the Save Time tab here */}
-                                                          <Image src={Product_develop} className="img-fluid " 
+                                                          <Image src={Product_develop_two} className="img-fluid " 
                                                       alt="Set up configurable workflows and monitor all of your lab processes efficiently with Logilab 
                                                       ELN software  — assign user privileges, manage task orders, and ensure streamlined lab operations."/>
                                                       </div>
@@ -584,8 +617,7 @@ return (
        
          </div>
 
-         <div className="comapare-owl mt-4">    
-          
+         <div className="comapare-owl mt-4">              
            <div className="hosting_title sec_title erp_title text-center">
           <h2 className="fw-bold text-center compare-sub pt_70">Grow better with Logilab ELN Lite</h2>
           <ComapreSlide/>
@@ -596,7 +628,7 @@ return (
 
           <div className="container mt-5">
             <div className="hosting_title sec_title erp_title text-center">
-            <h2 className="fw-bold text-center compare-sub pt_70 text-black">Loved by 100+ Industry-Leading Labs Globally </h2>
+            <h2 className="fw-bold text-center compare-sub pt_70 text-black">Loved by 100+ Industry Leading Labs Globally </h2>
           </div >
               <LiteSlider/>
               {/* <ComapreSlide /> */}
@@ -608,11 +640,13 @@ return (
           <div className="col-12 col-lg-6 compare_Frequently_Aske">
              <h2 className="f_800 text-black py-3">Frequently Asked Questions</h2>
              <div className="Frequently_Asked">
+             <div className="responsivecta">
              <p className="fw-bold text-black">Haven't found what you're loooking for</p>
              <div className="litebtn action_btn job-button text-md Registorheader">
-              <Link className="btn btn--blue " href="/contact-us">Contact Us</Link></div>
+              <Link className="btn btn--blue " href="/contact-us">Contact Us</Link>
               </div>
-            
+              </div>
+            </div>
           </div>
           <div className="col-12 col-lg-6 Frequently_Asked_Accordion">
           <section className="compare ">
@@ -695,7 +729,8 @@ return (
                     </div>
                   </div>
     </div>
-        <Footer/> 
+        {/* <Footer/>  */}
+        <Footer/>
   </div>
 );
 }

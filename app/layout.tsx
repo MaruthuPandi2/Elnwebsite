@@ -11,8 +11,29 @@ import Navbar from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });  
 
 export const metadata: Metadata = {
-  title: "Digital Solutions for Lab| Electronic Lab Notebook | Logilab ELN ",
+  title: "Digital Solutions for Lab| Electronic Lab Notebook | Logilab ELN",
   description: "Accelerate your research with Logilab ELN. Record data, create SOPs, configure workflows, track inventory usage, meet GxP compliance requirements and more.",
+  openGraph: {
+    title: 'Digital Solutions for Lab| Electronic Lab Notebook | Logilab ELN',
+    description: 'Accelerate your research with Logilab ELN. Record data, create SOPs, configure workflows, track inventory usage, meet GxP compliance requirements and more.',
+    url: 'https://www.logilabeln.com/company/about-us', 
+    images: [
+      {
+        url: 'https://www.logilabeln.com/assets/images/eln_logo.svg', 
+        width: 1200,
+        height: 630,
+        alt: 'About Us Image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Solutions for Lab| Electronic Lab Notebook | Logilab ELN',
+    description: 'Accelerate your research with Logilab ELN. Record data, create SOPs, configure workflows, track inventory usage, meet GxP compliance requirements and more.',
+    images: ['https://www.logilabeln.com/assets/images/eln_logo.svg'], 
+  },
+
+
 };
 
 export default function RootLayout({
@@ -46,6 +67,7 @@ export default function RootLayout({
 
         {/* Google Tag Manager (GTM) Script */}
         <Script
+        id="gtm-inline-script"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){
@@ -106,7 +128,7 @@ export default function RootLayout({
           `}
         </Script>
         {/* Navbar */}
-        <Navbar />
+        {/* <Navbar /> */}
         {/* Main Content */}
         {children}
         {/* Bootstrap Client */}

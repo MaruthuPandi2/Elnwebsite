@@ -41,6 +41,7 @@ import Footer from "./footer";
 import dashboard from '../public/assets/images/Dashboard-V3.png'
 import Earth_image from '../public/assets/images/Earth_image.svg'
 import Sliders from "@/components/slider";
+import Header from "@/components/header";
 
 export default function Solution() {
   const [isVisible, setIsVisible] = useState(false);
@@ -99,7 +100,8 @@ export default function Solution() {
 
   };
 return (
-  <div>
+  <div className="home-colour">
+    <Header/>
     <div className="home">
     <div className="h_security_banner_area homebannersize text-center">
             <div className="bannerBg"></div>
@@ -263,13 +265,14 @@ return (
                         </div>
                         <div className="col-6 col-lg-3">
                          <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center blug-img-mt">
-                            <Image src={chem_struc} className="img-fluid " alt=""/>
+                         <Image src={setup_config} className="img-fluid " alt=""/>
                             <p className="text-white  mb-0 ps-2">Register & execute task orders</p>
                          </div>
                         </div>
                         <div className="col-6 col-lg-3">
                             <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start align-items-center blug-img-mt">
-                                <Image src={setup_config} className="img-fluid " alt=""/>
+                            <Image src={chem_struc} className="img-fluid " alt=""/>
+                              
                                 <p className="text-white  mb-0 ps-2">Draw chemical structures</p>
                             </div>
                         </div>

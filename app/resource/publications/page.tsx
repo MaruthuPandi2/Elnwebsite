@@ -15,6 +15,7 @@ import Helparrow from '../../../public/assets/images/publication/help-arrow.svg'
 // import poster from '../../../public/assets/images/publication/Frame 88.svg'; 
 import poster from '../../../public/assets/images/Frame 88.svg'
 import Footer from '@/app/footer';
+import Header from '@/components/header';
 
 
 const Whitepaper = () => {
@@ -22,6 +23,7 @@ const Whitepaper = () => {
 
   return (
         <div>
+            <Header/>
         <div className="soltionbg publications security_banner_content download" style={{display:"flex", alignItems:"center"}}>
           <div className="container">
               <div className="row">

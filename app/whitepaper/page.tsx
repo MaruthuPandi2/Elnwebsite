@@ -12,6 +12,7 @@ import customer25 from '../../public/assets/images/customers/25.webp';
 import customer11 from '../../public/assets/images/customers/11.webp';
 import customer22 from '../../public/assets/images/customers/22.webp';
 import Footer from '../footer';
+import Header from '@/components/header';
 
 
 const Whitepaper = () => {
@@ -19,6 +20,7 @@ const Whitepaper = () => {
 
   return (
     <div>
+      <Header/>
             <div className='whitepaper-banner'>
               <div className='container text-center'>
                 <h2>CHISEL PAYS FOR ITSELF WITHIN 1-2 MONTHS :</h2>

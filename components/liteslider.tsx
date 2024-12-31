@@ -5,6 +5,7 @@ import e from '../public/assets/images/customers/megafine.svg'
 import hp from '../public/assets/images/customers/rudolphreserch.svg'
 import mbs from '../public/assets/images/customers/cpi.svg'
 import cipla from '../public/assets/images/customers/smtl.svg'
+import mbss from '../../eln/public/assets/images/customers/bharati vidyapeeth.svg'
 import Image from "next/image";
 
 var $ = require('jquery');
@@ -54,6 +55,7 @@ export default function LiteSlider() {
     loop: true,
     margin: 10,
     autoplay: false,
+    dots: false,
     responsive: {
       0: { // For screens from 0px to 768px
         items: 2, // Show 2 items on mobile
@@ -68,6 +70,11 @@ export default function LiteSlider() {
   return (
     <div className="slidedot">
       <OwlCarousel className="owl-theme" {...options}>
+      <div className="item single-logo">
+          {/* <img src="../assets/images/customers/mbs.png" className="img-fluid slideimag" alt="Slide 4" /> */}
+          <Image src={mbs} className="img-fluid slideimag" alt="The Surgical Materials Testing Laboratory (SMTL), UK"/>
+        </div>
+
         <div className="item single-logo">
           {/* <img src="../assets/images/customers/e.png" className="img-fluid slideimag" alt="Slide 2" /> */}
           <Image src={e} className="img-fluid slideimag" alt="Megafine Pharma, India"/>
@@ -76,13 +83,11 @@ export default function LiteSlider() {
           
           <Image src={hp} className="img-fluid slideimag" alt="Rudolph Research Analytical, USA"/>
         </div>
-        <div className="item single-logo">
-          {/* <img src="../assets/images/customers/mbs.png" className="img-fluid slideimag" alt="Slide 4" /> */}
-          <Image src={mbs} className="img-fluid slideimag" alt="The Surgical Materials Testing Laboratory (SMTL), UK"/>
-        </div>
+      
         <div className="item single-logo">
           {/* <img src="../assets/images/customers/dbos.png" className="img-fluid slideimag" alt="Slide 1" /> */}
-          <Image src={thsti} className="img-fluid slideimag mt-4 thusti" alt="Hindustan Petroleum Corporation Limited, India (HPCL)"/>
+          {/* <Image src={thsti} className="img-fluid slideimag mt-4 thusti" alt="Hindustan Petroleum Corporation Limited, India (HPCL)"/> */}
+          <Image src={mbss} className="img-fluid  elnimage_size" alt=""/>
         </div>
         <div className="item single-logo">
           {/* <img src="../assets/images/customers/cipla.png" className="img-fluid slideimag" alt="Slide 5" /> */}

@@ -10,6 +10,7 @@ import Moreproduct from '@/components/moreproduct';
 import Footer from '../../footer';
 import cta2 from '../../../public/assets/images/cta2.svg'
 import Image from "next/image";
+import Header from '@/components/header';
 function FaqSection () {
   const [activeCollapse, setActiveCollapse] = useState<string | null>(null);
 
@@ -17,7 +18,8 @@ function FaqSection () {
     setActiveCollapse(activeCollapse === id ? null : id);
   };
     return (      
-      <div>    
+      <div>
+        <Header/>    
         {/* <div className="breadcrumb_area">
           <img className="breadcrumb_shap" src="img/breadcrumb/banner_bg.png" alt="" />
          <div className="container pricingBanner">

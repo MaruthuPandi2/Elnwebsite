@@ -21,6 +21,7 @@ import home_calender from '../../../public/assets/images/home_calender.svg'
 import LogilabELNwhite from '../../../public/assets/images/Logilab-ELN_white.svg'
 import elnlite_finalfontsize from '../../../public/assets/images/elnlite_finalfontsize.svg'
 import academyfirst from '../../../public/assets/images/academyfirst.svg'
+import Header from "@/components/header";
 export default function Academi(){
 
   const { isSticky, nextSectionTop, lastContainerBottom, isHidden ,offset1, offset2, offset3,offset4,offset5 } = useScroll();
@@ -28,7 +29,7 @@ export default function Academi(){
 
     return(
       <div>
-
+          <Header/>
         <div className="soltionbg acadmic-banner security_banner_content">
           <div className="container">
               <div className="row">

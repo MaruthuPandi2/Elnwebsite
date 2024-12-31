@@ -13,6 +13,7 @@ import Publicwhiteone from '../../../public/assets/images/publication/public-whi
 import Publicwhitetwo from '../../../public/assets/images/publication/public-white4.svg';
 import Helparrow from '../../../public/assets/images/publication/help-arrow.svg';
 import Footer from '@/app/footer';
+import Header from '@/components/header';
 
 
 const Whitepaper = () => {
@@ -20,6 +21,7 @@ const Whitepaper = () => {
 
   return (
         <div>
+            <Header/>
         <div className="soltionbg security_banner_content download">
           <div className="container">
               <div className="row">

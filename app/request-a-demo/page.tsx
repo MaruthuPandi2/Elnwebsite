@@ -1,5 +1,6 @@
 'use client'; 
 
+import Header from "@/components/header";
 import Footer from "../footer";
 import React, { useEffect } from "react";
 function Request() {
@@ -72,6 +73,8 @@ function Request() {
           </p>
         </div>
       </div> */}
+
+      <Header/>
  <div className='about-us'>
  <div className="soltionbg security_banner_content ">
           <div className="container">

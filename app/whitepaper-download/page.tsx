@@ -2,10 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Footer from '../footer';
+import Header from '@/components/header';
 
 function Productdownload() {
   return (
     <>
+    <Header/>
       <div className="soltionbg security_banner_content " style={{display:"flex", alignItems:"center"}}>
           <div className="container">
               <div className="row">

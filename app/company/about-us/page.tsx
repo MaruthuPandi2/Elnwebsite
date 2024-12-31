@@ -20,6 +20,7 @@ import Moreproduct from '@/components/moreproduct';
 import CorevalueItem from '@/components/corevalueItem';
 import Clientsimage from '@/components/clients-image-section';
 import Footer from '@/app/footer';
+import Header from '@/components/header';
 // import Clientsimage from '@/components/clients-image-section';
 // import Moreproduct from '@/components/moreproduct';
 
@@ -75,6 +76,7 @@ function AboutUs() {
 
   return (
     <div> 
+      <Header/>
       <div className='about-us'>
       <div className="soltionbg solutionmain security_banner_content ">
     <div className="container ">
@@ -101,8 +103,6 @@ function AboutUs() {
        </div>
        </div>
         </div> 
-
-
         <div className="aboutus-wrapper section-space--ptb_100">
             <Container>
                 <div className="cybersecurity-about-box">
@@ -123,8 +123,6 @@ function AboutUs() {
                 </div>
             </Container>
         </div>
-
-
         <div className="machine-learning-about-company-area machine-learning-about-bg section-space--pb_120">
             <Container>
                 <Row>
@@ -177,7 +175,6 @@ function AboutUs() {
                 </Row>
             </Container>
         </div>
-
         <div className="gradation-process-area bg-lblue section-space--ptb_100">
             <Container>
                 <Row>

@@ -27,6 +27,7 @@ import Comprehensive_audit_trails from '../../public/assets/images/Comprehensive
 import cta2 from '../../public/assets/images/cta2.svg'  
 import type { Metadata } from "next";
 import { useRouter } from 'next/router';
+import Header from "@/components/header";
 
 
 
@@ -96,7 +97,7 @@ export default function Solution() {
 
 return (
   <div>
-
+        <Header/>
         <div className="soltionbg solutionmain security_banner_content">
           <div className="container">
           

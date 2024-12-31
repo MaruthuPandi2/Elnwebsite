@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Footer from "../footer";
-
+import Header from "@/components/header";
 function Productdownload() {
   useEffect(() => {
     const iframe = document.getElementById("JotFormIFrame-233211048510441") as HTMLIFrameElement;
@@ -30,7 +30,7 @@ function Productdownload() {
             iframe.style.height = `${window.innerHeight}px`;
           }
           break;
-        default:
+          default:
           break;
       }
     };
@@ -61,6 +61,7 @@ function Productdownload() {
 
   return (
     <>
+    <Header/>
       {/* Banner Section */}
       <div className="soltionbg security_banner_content" style={{ display: "flex", alignItems: "center" }}>
         <div className="container">

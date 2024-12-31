@@ -11,10 +11,12 @@ import policy from '../../../public/assets/images/about/policy.png';
 import Image from "next/image";
 import Moreproduct from '@/components/moreproduct';
 import Footer from '../../footer';
+import Header from '@/components/header';
 
 function Certifications() { 
   return (
     <div>
+      <Header/>
          <div className='about-us certifications'>
 <div className="soltionbg security_banner_content ">
     <div className="container ">

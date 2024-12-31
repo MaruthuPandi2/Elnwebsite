@@ -232,7 +232,8 @@ function Plan () {
       }
 
     return (
-        <div className='plan-page'>
+      <>
+           <div className='plan-page'>
             <div className="preloader-activate preloader-active open_tm_preloader">
                 <div className="preloader-area-wrap">
                     <div className="spinner d-flex justify-content-center align-items-center h-100">
@@ -264,7 +265,7 @@ function Plan () {
       <PriceCalculator/>
     </div>
 
-          ) : (<div className="pricing-table-area section-space--ptb_100 bg-gray1">
+          ) : (<div className="pricing-table-area section-space--ptb_100 bg-gray1 pb-0">
                 <div className="container">
                     <div className="row section-space--mb_40">
                         <div className="col-lg-12 ht-tab-wrap">
@@ -454,7 +455,7 @@ function Plan () {
                                           $<span id="singleuser_lite2">{calculatedPrices.liteMonthly.toFixed(2)}</span>
                                         </span>
                                         <br />
-                                        <span>per user / year</span>
+                                        <span>per user / month</span>
                                         <br />
                                         <span className="total-price">
                                           $<span id="price_lite2">{calculatedPrices.roundliteAnnual.toFixed(2)}</span>
@@ -492,7 +493,7 @@ function Plan () {
                                           $<span id="singleuser_standard2">{calculatedPrices.standardMonthly.toFixed(2)}</span>
                                         </span>
                                         <br />
-                                        <span>per user / year</span>
+                                        <span>per user / month</span>
                                         <br />
                                         <span className="total-price">
                                           $<span id="price_standard2">{calculatedPrices.roundstandardAnnual.toFixed(2)}</span>
@@ -533,7 +534,7 @@ function Plan () {
                                           $<span id="singleuser_premium2">{calculatedPrices.premiumMonthly.toFixed(2)}</span>
                                         </span>
                                         <br />
-                                        <span>per user / year</span>
+                                        <span>per user / month</span>
                                         <br />
                                         <span className="total-price">
                                           $<span id="price_premium2">{calculatedPrices.roundpremiumAnnual.toFixed(2)}</span>
@@ -712,7 +713,7 @@ function Plan () {
                     <h6 className="sub-title">ELN Lite</h6>
                     <b className="sub-para">Perfect for getting familiar with ELN</b><br />
                     <span className="price">$<span id="singleuser_lite2_a">{calculatedPrices.yearlyLite}</span></span><br />
-                    <span>per user / year</span><br />
+                    <span>per user / month</span><br />
                     <span className="total-price">$<span id="price_lite2_a">{calculatedPrices.roundyearlyLite.toFixed(2)}</span></span> <span>for <span id="output4">{qty}</span> users</span>
                   </div>
                   <div className="pricing-table__body">
@@ -738,7 +739,7 @@ function Plan () {
                     <h6 className="sub-title">Standard</h6>
                     <b className="sub-para">Everything in Lite Plan plus:</b><br />
                     <span className="price">$<span id="singleuser_standard2_a">{calculatedPrices.yearlyStandard}</span></span><br />
-                    <span>per user / year</span><br />
+                    <span>per user / month</span><br />
                     <span className="total-price">$<span id="price_standard2_a">{calculatedPrices.roundyearlyStandard.toFixed(2)}</span></span> <span>for <span id="output5">{qty}</span> users</span>
                   </div>
                   <div className="pricing-table__body">
@@ -767,7 +768,7 @@ function Plan () {
                     <h6 className="sub-title">Premium</h6>
                     <b className="sub-para">Perfect for mid-sized and large teams</b><br />
                     <span className="price">$<span id="singleuser_premium2_a">{calculatedPrices.yearlyPremium}</span></span><br />
-                    <span>per user / year</span><br />
+                    <span>per user / month</span><br />
                     <span className="total-price">$<span id="price_premium2_a">{calculatedPrices.roundyearlyPremium.toFixed(2)}</span></span> <span>for <span id="output6">{qty}</span> users</span>
                   </div>
                   <div className="pricing-table__body">
@@ -800,13 +801,13 @@ function Plan () {
     </div>
     </div>
                     </div>
-                    <center>
+                    {/* <center>
                     <div className="hero-button">
         
                       <Link href="#plan-table" className="btn btn--blue">See all the features and compare plans</Link>
                     
                   </div>
-                    </center>
+                    </center> */}
                 </div>
             </div>)}
             
@@ -1519,6 +1520,8 @@ function Plan () {
     {/* <Moreproduct/> */}
     <Footer/>
   </div>
+      </>
+   
     );
 
 }

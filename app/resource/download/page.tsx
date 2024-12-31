@@ -16,6 +16,7 @@ import Downloadicon from '../../../public/assets/images/download.png';
 import Summary from '@/components/summary';
 import Moreproduct from '@/components/moreproduct';
 import Footer from '../../footer';
+import Header from '@/components/header';
 
 
 const Download = () => {
@@ -31,7 +32,7 @@ const Download = () => {
                   </Link>
               </div>
             </div> */}
-
+        <Header/>
       <div className="soltionbg security_banner_content download">
             <div className="container">
                 <div className="row">

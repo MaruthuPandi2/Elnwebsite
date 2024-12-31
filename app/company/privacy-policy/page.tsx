@@ -6,10 +6,12 @@ import Moreproduct from "@/components/moreproduct";
 import cta2 from '../../../public/assets/images/cta2.svg'
 import Image from "next/image";
 import Link from "next/link"; 
+import Header from "@/components/header";
 function TermsConditions() { 
     
   return (
     <div>
+      <Header/>
        <div className='about-us'>
      <div className="soltionbg security_banner_content ">
           <div className="container">

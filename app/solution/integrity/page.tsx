@@ -12,13 +12,14 @@ import Comprehensive_audit_trails from '../../../public/assets/images/Comprehens
 import cta2 from '../../../public/assets/images/cta2.svg' 
 import home_calender from '../../../public/assets/images/home_calender.svg'
 import LogilabELNwhite from '../../../public/assets/images/Logilab-ELN_white.svg'
+import Header from "@/components/header";
 export default function Integrity(){
 
   const { isSticky, nextSectionTop, lastContainerBottom, isHidden ,offset1, offset2, offset3,offset4,offset5 } = useScroll();
 
   return(
     <div>
-
+        <Header/>
        <div className="soltionbg integrity security_banner_content">
           <div className="container">
               <div className="row">

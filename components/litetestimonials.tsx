@@ -30,7 +30,7 @@ const litetestimonials = [
 
 const Litetestimonials = () => {
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="row">
         {litetestimonials.map((testimonial, index) => (
           <div key={index} className="col-md-6 mb-4">

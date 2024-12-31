@@ -41,6 +41,7 @@ import dashboard from '../../public/assets/images/Dashboard-V3.png'
 import Earth_image from '../../public/assets/images/Earth_image.svg'
 import Sliders from "@/components/slider";
 import Footer from "../footer";
+import Header from "@/components/header";
 
 export default function Solution() {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,7 +98,8 @@ export default function Solution() {
 
   };
 return (
-  <div>
+  <div className="home-colour">
+    <Header/>
     <div className="home">
     <div className="h_security_banner_area homebannersize text-center"  role="img"
       aria-label="Comprehensive Dashboard of Logilab ELN (Electronic Laboratory Notebook) to keep track of your projects' progress and KPIs.">

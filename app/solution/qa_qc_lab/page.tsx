@@ -16,10 +16,12 @@ import raw_data from '../../../public/assets/images/raw_data.svg'
 import loglab_Eln from '../../../public/assets/images/loglab_Eln.svg';
 import loginewimage from '../../../public/assets/images/loginewimage.svg'
 import cta2 from '../../../public/assets/images/cta2.svg' 
+import Header from "@/components/header";
 export default function QA(){
   const { isSticky, nextSectionTop, lastContainerBottom, isHidden ,offset1, offset2, offset3,offset4,offset5 } = useScroll();
     return(
       <div>
+        <Header/>
         <div className="soltionbg solutionmain security_banner_content">
           <div className="container">
               <div className="row">
