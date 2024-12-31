@@ -2,12 +2,12 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import logo20 from '../../eln/public/assets/images/customers/hindusthan.svg';
-import logo21 from '../../eln/public/assets/images/customers/megafine.svg';
-import logo22 from '../../eln/public/assets/images/customers/rudolphreserch.svg';
-import logo23 from '../../eln/public/assets/images/customers/cpi.svg';
-import logo24 from '../../eln/public/assets/images/customers/smtl.svg';
-import logo25 from '../../eln/public/assets/images/customers/7.webp';
+import logo20 from '../public/assets/images/customers/hindusthan.svg';
+import logo21 from '../public/assets/images/customers/megafine.svg';
+import logo22 from '../public/assets/images/customers/rudolphreserch.svg';
+import logo23 from '../public/assets/images/customers/cpi.svg';
+import logo24 from '../public/assets/images/customers/smtl.svg';
+import logo25 from '../public/assets/images/customers/7.webp';
 export default function Clientsimage() {
   return (
     <div className="clients-images-wrapper section-space--pt_60">
