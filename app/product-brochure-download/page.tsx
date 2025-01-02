@@ -99,7 +99,7 @@ function Productdownload() {
                 <p className="f_size_16 f_600 p-3">
                   Please submit the form below to immediately access a comprehensive overview of the Product Brochure.
                 </p>
-                {/* <iframe 
+                <iframe 
   id="JotFormIFrame-240241711476450" 
   title="ELN Website ELN Brochure Download form"
   allowTransparency={true} 
@@ -111,8 +111,8 @@ function Productdownload() {
    width="100%"
   className="jotform-iframe3"
   scrolling="no">
-</iframe> */}
-            <iframe 
+</iframe>
+            {/* <iframe 
               id="JotFormIFrame-233192618220450" 
               title="ELN Website ELN Brochure Download form"
               allowTransparency={true} 
@@ -124,7 +124,7 @@ function Productdownload() {
               width="100%"
               // className="jotform-iframe3"
               scrolling="no">
-            </iframe>
+            </iframe> */}
               </div>
             </div>
           </div>
