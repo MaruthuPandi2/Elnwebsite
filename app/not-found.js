@@ -1,8 +1,11 @@
 
 import Footer from './footer';
+import Header from "@/components/header";
 export default function NotFound() {
   return (
-    <><div>
+    <>
+    <Header/>
+    <div>
     <section className="error_page">
        
         <div className=" flex">
