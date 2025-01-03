@@ -157,32 +157,40 @@
 
 
 
-import path from 'path';
-import { createReadStream } from 'fs';
-import { stat } from 'fs/promises';
+// import path from 'path';
+// import { createReadStream } from 'fs';
+// import { stat } from 'fs/promises';
+// import { NextRequest, NextResponse } from 'next/server';
+
+// export async function GET(req: NextRequest): Promise<NextResponse> {
+//     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
+
+//     try {
+//         // Check if file exists and get file stats
+//         const fileStats = await stat(filePath);
+
+//         // Create a readable stream for the file
+//         const fileStream = createReadStream(filePath);
+
+//         // Return the response as a stream
+//         return new NextResponse(fileStream as any, {
+//             headers: {
+//                 'Content-Disposition': 'attachment; filename="eln-brochure.pdf"', // Explicit filename
+//                 'Content-Type': 'application/pdf', // File type
+//                 'Content-Length': fileStats.size.toString(), // File size
+//             },
+//         });
+//     } catch (error) {
+//         console.error('Error reading file:', error);
+//         return new NextResponse('File not found', { status: 404 });
+//     }
+// }
+
+
+
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
-    const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
-
-    try {
-        // Check if file exists and get file stats
-        const fileStats = await stat(filePath);
-
-        // Create a readable stream for the file
-        const fileStream = createReadStream(filePath);
-
-        // Return the response as a stream
-        return new NextResponse(fileStream as any, {
-            headers: {
-                'Content-Disposition': 'attachment; filename="eln-brochure.pdf"', // Explicit filename
-                'Content-Type': 'application/pdf', // File type
-                'Content-Length': fileStats.size.toString(), // File size
-            },
-        });
-    } catch (error) {
-        console.error('Error reading file:', error);
-        return new NextResponse('File not found', { status: 404 });
-    }
+    const fileUrl = `${req.nextUrl.origin}/files/eln-brochure.pdf`;
+    return NextResponse.redirect(fileUrl, 302); // Redirect to the static file
 }
-
