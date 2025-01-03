@@ -147,44 +147,36 @@
 
 
 
-import { NextRequest, NextResponse } from 'next/server';
-
-export async function GET(req: NextRequest): Promise<NextResponse> {
-    const pdfUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/files/eln-brochure.pdf`; // Base URL pointing to the static file
-    // const pdfUrl = `http://localhost:3000/files/eln-brochure.pdf`; // Base URL pointing to the static file
-    return NextResponse.redirect(pdfUrl, 302); // Redirect to the static file URL
-}
-
-
-
-// import path from 'path';
-// import { promises as fs } from 'fs';
 // import { NextRequest, NextResponse } from 'next/server';
 
 // export async function GET(req: NextRequest): Promise<NextResponse> {
-//     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
-
-//     try {
-//         // Ensure the file exists
-//         const fileBuffer = await fs.readFile(filePath);
-
-//         // Return the file as a stream
-//         const stream = new ReadableStream({
-//             start(controller) {
-//                 controller.enqueue(fileBuffer);
-//                 controller.close();
-//             }
-//         });
-
-//         return new NextResponse(stream, {
-//             headers: {
-//                 'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
-//                 'Content-Type': 'application/pdf',  // Ensures it's recognized as a PDF
-//                 'Content-Length': fileBuffer.length.toString(), // Make sure the browser knows the file length
-//             },
-//         });
-//     } catch (error) {
-//         console.error('File not found or error reading file:', error);
-//         return new NextResponse('File not found', { status: 404 });
-//     }
+//     const pdfUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/files/eln-brochure.pdf`; // Base URL pointing to the static file
+//     // const pdfUrl = `http://localhost:3000/files/eln-brochure.pdf`; // Base URL pointing to the static file
+//     return NextResponse.redirect(pdfUrl, 302); // Redirect to the static file URL
 // }
+
+
+
+import path from 'path';
+import { promises as fs } from 'fs';
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function GET(req: NextRequest): Promise<NextResponse> {
+    const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
+
+    try {
+        const fileBuffer = await fs.readFile(filePath);
+
+        return new NextResponse(fileBuffer, {
+            headers: {
+                'Content-Disposition': 'attachment; filename="eln-brochure.pdf"', // Explicit filename with .pdf extension
+                'Content-Type': 'application/pdf',
+                'Content-Length': fileBuffer.length.toString(),
+            },
+        });
+    } catch (error) {
+        console.error('Error reading file:', error);
+        return new NextResponse('File not found', { status: 404 });
+    }
+}
+
