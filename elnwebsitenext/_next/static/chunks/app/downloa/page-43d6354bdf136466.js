@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2081],{4057:function(n,e,u){Promise.resolve().then(u.bind(u,2942))},2942:function(n,e,u){"use strict";u.r(e),u.d(e,{default:function(){return r}});var t=u(1169);function r(){return(0,t.redirect)("/api/download"),null}}},function(n){n.O(0,[2971,7023,1744],function(){return n(n.s=4057)}),_N_E=n.O()}]);

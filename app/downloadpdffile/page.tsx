@@ -17,7 +17,7 @@ import AutoDownload from '@/components/AutoDownload';
 export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Brochure Download Page</h1>
+      {/* <h1>Welcome to the Brochure Download Page</h1> */}
       <AutoDownload />
     </div>
   );
