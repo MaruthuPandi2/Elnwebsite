@@ -165,11 +165,22 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
 
     try {
+        // Ensure the file exists
         const fileBuffer = await fs.readFile(filePath);
-        return new NextResponse(fileBuffer, {
+
+        // Return the file as a stream
+        const stream = new ReadableStream({
+            start(controller) {
+                controller.enqueue(fileBuffer);
+                controller.close();
+            }
+        });
+
+        return new NextResponse(stream, {
             headers: {
                 'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
-                'Content-Type': 'application/pdf',
+                'Content-Type': 'application/pdf',  // Ensures it's recognized as a PDF
+                'Content-Length': fileBuffer.length.toString(), // Make sure the browser knows the file length
             },
         });
     } catch (error) {
