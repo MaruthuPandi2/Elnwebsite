@@ -158,20 +158,26 @@
 
 
 import path from 'path';
-import { promises as fs } from 'fs';
+import { createReadStream } from 'fs';
+import { stat } from 'fs/promises';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
 
     try {
-        const fileBuffer = await fs.readFile(filePath);
+        // Check if file exists and get file stats
+        const fileStats = await stat(filePath);
 
-        return new NextResponse(fileBuffer, {
+        // Create a readable stream for the file
+        const fileStream = createReadStream(filePath);
+
+        // Return the response as a stream
+        return new NextResponse(fileStream as any, {
             headers: {
-                'Content-Disposition': 'attachment; filename="eln-brochure.pdf"', // Explicit filename with .pdf extension
-                'Content-Type': 'application/pdf',
-                'Content-Length': fileBuffer.length.toString(),
+                'Content-Disposition': 'attachment; filename="eln-brochure.pdf"', // Explicit filename
+                'Content-Type': 'application/pdf', // File type
+                'Content-Length': fileStats.size.toString(), // File size
             },
         });
     } catch (error) {
