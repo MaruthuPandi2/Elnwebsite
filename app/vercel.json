@@ -1,13 +1,7 @@
 {
-    "rewrites": [
-      {
-        "source": "/files/:path*",
-        "destination": "/files/:path*"
-      }
-    ],
     "headers": [
       {
-        "source": "/files/:path*",
+        "source": "/files/eln-brochure.pdf",
         "headers": [
           {
             "key": "Content-Disposition",
