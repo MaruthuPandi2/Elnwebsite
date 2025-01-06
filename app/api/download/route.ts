@@ -198,23 +198,46 @@
 
 //2025-01-06
 
+// import path from 'path';
+// import { NextResponse } from 'next/server';
+// import fs from 'fs';
+
+// export async function GET(): Promise<NextResponse> {
+//     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
+
+//     if (!fs.existsSync(filePath)) {
+//         return new NextResponse('File not found', { status: 404 });
+//     }
+
+//     const fileBuffer = fs.readFileSync(filePath);
+
+//     return new NextResponse(fileBuffer, {
+//         headers: {
+//             'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+//             'Content-Type': 'application/pdf',
+//         },
+//     });
+// }
+
+
 import path from 'path';
-import { NextResponse } from 'next/server';
-import fs from 'fs';
+import { promises as fs } from 'fs';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(): Promise<NextResponse> {
+export async function GET(req: NextRequest): Promise<NextResponse> {
     const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
+    
+    try {
+        const fileBuffer = await fs.readFile(filePath);
 
-    if (!fs.existsSync(filePath)) {
+        return new NextResponse(fileBuffer, {
+            headers: {
+                'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+                'Content-Type': 'application/pdf',
+            },
+        });
+    } catch (error) {
+        console.error('File not found or error reading file:', error);
         return new NextResponse('File not found', { status: 404 });
     }
-
-    const fileBuffer = fs.readFileSync(filePath);
-
-    return new NextResponse(fileBuffer, {
-        headers: {
-            'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
-            'Content-Type': 'application/pdf',
-        },
-    });
 }
