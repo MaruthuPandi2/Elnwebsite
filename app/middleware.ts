@@ -14,6 +14,6 @@ export function middleware(req: NextRequest) {
         return response;
     }
 
-    // Allow other requests to pass through
+    // Allow other requests to pass through file
     return NextResponse.next();
 }
