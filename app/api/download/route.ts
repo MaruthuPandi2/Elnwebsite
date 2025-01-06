@@ -188,9 +188,33 @@
 
 
 
-import { NextRequest, NextResponse } from 'next/server';
+// import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest): Promise<NextResponse> {
-    const fileUrl = `${req.nextUrl.origin}/files/eln-brochure.pdf`;
-    return NextResponse.redirect(fileUrl, 302); // Redirect to the static file
+// export async function GET(req: NextRequest): Promise<NextResponse> {
+//     const fileUrl = `${req.nextUrl.origin}/files/eln-brochure.pdf`;
+//     return NextResponse.redirect(fileUrl, 302); // Redirect to the static file
+// }
+
+
+//2025-01-06
+
+import path from 'path';
+import { NextResponse } from 'next/server';
+import fs from 'fs';
+
+export async function GET(): Promise<NextResponse> {
+    const filePath = path.join(process.cwd(), 'public', 'files', 'eln-brochure.pdf');
+
+    if (!fs.existsSync(filePath)) {
+        return new NextResponse('File not found', { status: 404 });
+    }
+
+    const fileBuffer = fs.readFileSync(filePath);
+
+    return new NextResponse(fileBuffer, {
+        headers: {
+            'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+            'Content-Type': 'application/pdf',
+        },
+    });
 }
