@@ -273,7 +273,9 @@ import path from 'path';
 
 export async function GET() {
   // const filePath = path.join(process.cwd(), 'files/eln-brochure.pdf');
-  const filePath = path.resolve('files', 'eln-brochure.pdf');
+  // const filePath = path.resolve('files', 'eln-brochure.pdf');
+  const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+
   const fileBuffer = fs.readFileSync(filePath);
 
   const response = new NextResponse(fileBuffer, {
