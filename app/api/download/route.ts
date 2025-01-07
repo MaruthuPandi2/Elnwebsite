@@ -290,11 +290,35 @@
 
 
 
+// import { NextRequest } from 'next/server';
+// import fs from 'fs';
+// import path from 'path';
+
+// // Mark this route as dynamic
+// export const dynamic = 'force-dynamic';
+
+// export async function GET(req: NextRequest) {
+//   try {
+//     const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+//     const fileContents = fs.readFileSync(filePath);
+
+//     return new Response(fileContents, {
+//       headers: {
+//         'Content-Type': 'application/pdf',
+//         'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+//       },
+//     });
+//   } catch (error) {
+//     console.error('Error serving the file:', error);
+//     return new Response('File not found', { status: 404 });
+//   }
+// }
+
+
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-// Mark this route as dynamic
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
