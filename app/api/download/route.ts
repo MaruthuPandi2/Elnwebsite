@@ -278,7 +278,7 @@ export async function GET() {
   const response = new NextResponse(fileBuffer, {
     headers: {
       'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment; filename="brochure.pdf"',
+      'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
     },
   });
 
