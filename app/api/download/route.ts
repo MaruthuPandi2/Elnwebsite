@@ -315,25 +315,37 @@
 // }
 
 
-import { NextRequest } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+// import { NextRequest } from 'next/server';
+// import fs from 'fs';
+// import path from 'path';
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
-export async function GET(req: NextRequest) {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
-    const fileContents = fs.readFileSync(filePath);
+// export async function GET(req: NextRequest) {
+//   try {
+//     const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+//     const fileContents = fs.readFileSync(filePath);
 
-    return new Response(fileContents, {
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
-      },
-    });
-  } catch (error) {
-    console.error('Error serving the file:', error);
-    return new Response('File not found', { status: 404 });
-  }
+//     return new Response(fileContents, {
+//       headers: {
+//         'Content-Type': 'application/pdf',
+//         'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+//       },
+//     });
+//   } catch (error) {
+//     console.error('Error serving the file:', error);
+//     return new Response('File not found', { status: 404 });
+//   }
+// }
+
+
+//07-01-25
+
+// pages/api/download.tsx
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Redirecting to the static file in the 'public' folder
+  res.redirect('/eln-brochure.pdf');
 }
