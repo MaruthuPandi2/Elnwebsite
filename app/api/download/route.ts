@@ -267,23 +267,48 @@
 
 
 
-import { NextResponse } from 'next/server';
+// import { NextResponse } from 'next/server';
+// import fs from 'fs';
+// import path from 'path';
+
+// export async function GET() {
+//   // const filePath = path.join(process.cwd(), 'files/eln-brochure.pdf');
+//   // const filePath = path.resolve('files', 'eln-brochure.pdf');
+//   const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+
+//   const fileBuffer = fs.readFileSync(filePath);
+
+//   const response = new NextResponse(fileBuffer, {
+//     headers: {
+//       'Content-Type': 'application/pdf',
+//       'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+//     },
+//   });
+
+//   return response;
+// }
+
+
+
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
-  // const filePath = path.join(process.cwd(), 'files/eln-brochure.pdf');
-  // const filePath = path.resolve('files', 'eln-brochure.pdf');
-  const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+// Mark this route as dynamic
+export const dynamic = 'force-dynamic';
 
-  const fileBuffer = fs.readFileSync(filePath);
+export async function GET(req) {
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
+    const fileContents = fs.readFileSync(filePath);
 
-  const response = new NextResponse(fileBuffer, {
-    headers: {
-      'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
-    },
-  });
-
-  return response;
+    return new Response(fileContents, {
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+      },
+    });
+  } catch (error) {
+    console.error('Error serving the file:', error);
+    return new Response('File not found', { status: 404 });
+  }
 }
