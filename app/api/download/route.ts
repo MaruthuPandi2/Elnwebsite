@@ -290,13 +290,14 @@
 
 
 
+import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
 // Mark this route as dynamic
 export const dynamic = 'force-dynamic';
 
-export async function GET(req) {
+export async function GET(req: NextRequest) {
   try {
     const filePath = path.join(process.cwd(), 'public', 'eln-brochure.pdf');
     const fileContents = fs.readFileSync(filePath);
