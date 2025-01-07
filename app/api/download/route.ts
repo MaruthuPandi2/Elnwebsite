@@ -3,7 +3,7 @@
 // import path from 'path';
 
 // export async function GET() {
-//    const filePath = path.join(process.cwd(), 'assets/pdf/eln-brochure.pdf');
+//   //  const filePath = path.join(process.cwd(), 'assets/pdf/eln-brochure.pdf');
 //   const filePath = path.resolve('/assets/pdf/eln-brochure.pdf');
 
 //   console.log('File paths:', filePath);
@@ -343,9 +343,63 @@
 
 // pages/api/download.tsx
 
-import { NextApiRequest, NextApiResponse } from 'next';
+// import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Redirecting to the static file in the 'public' folder
-  res.redirect('/eln-brochure.pdf');
+// export default function handler(req: NextApiRequest, res: NextApiResponse) {
+//   // Redirecting to the static file in the 'public' folder
+//   res.redirect('/eln-brochure.pdf');
+// }
+
+
+// api/generate-pdf.ts
+// pages/api/generate-pdf.ts
+// import { NextApiRequest, NextApiResponse } from 'next';
+// import { PDFDocument } from 'pdf-lib';
+
+// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+//   try {
+//     // Create a new PDF document
+//     const pdfDoc = await PDFDocument.create();
+//     const page = pdfDoc.addPage([600, 400]);
+//     const { width, height } = page.getSize();
+
+//     // Add some text to the PDF
+//     page.drawText('Hello, this is your PDF!', { x: 50, y: height - 50 });
+
+//     // Serialize the PDF to bytes
+//     const pdfBytes = await pdfDoc.save();
+
+//     // Set response headers to prompt file download
+//     res.setHeader('Content-Disposition', 'attachment; filename="generated-pdf.pdf"');
+//     res.setHeader('Content-Type', 'application/pdf');
+//     res.setHeader('Content-Length', pdfBytes.length);
+
+//     // Send the PDF bytes
+//     res.status(200).send(Buffer.from(pdfBytes));
+//   } catch (error) {
+//     res.status(500).json({ message: 'Failed to generate PDF', error });
+//   }
+// }
+
+
+import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
+
+export async function GET() {
+  const filePath = path.join(process.cwd(), 'public', 'assets', 'pdf', 'eln-brochure.pdf'); // Adjust the path as needed
+
+  console.log('File path:', filePath);
+
+  if (!fs.existsSync(filePath)) {
+    return NextResponse.json({ error: 'File not found' }, { status: 404 });
+  }
+
+  const file = fs.readFileSync(filePath);
+  return new NextResponse(file, {
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': 'attachment; filename="eln-brochure.pdf"',
+    },
+  });
 }
