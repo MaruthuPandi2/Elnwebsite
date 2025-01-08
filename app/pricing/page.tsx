@@ -319,10 +319,10 @@ function Plan () {
                           <span className="dropdown-arrow" onClick={handleTabClick}></span>
                             <ul className="nav nav-tabs justify-content-center ht-tab-menu" role="tablist" style={{borderBottom:"0"}}>
                                 <li className="tab__item nav-item active">
-                                    <Link className="nav-link active" id="nav-tab1" data-bs-toggle="tab" href="" role="tab" aria-selected="true">Standard</Link>
+                                    <Link className="nav-link active" id="nav-tab1" data-bs-toggle="tab" href="#standard-tab" role="tab" aria-selected="true">Standard</Link>
                                 </li>
                                 <li className="tab__item nav-item">
-                                    <Link className="nav-link" id="nav-tab2" data-bs-toggle="tab" href="" role="tab" aria-selected="false">Academic</Link>
+                                    <Link className="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#academic-tab" role="tab" aria-selected="false">Academic</Link>
                                 </li>
                             </ul>
                         </div>

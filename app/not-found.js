@@ -1,11 +1,12 @@
 
 import Footer from './footer';
-import Header from "@/components/header";
 export default function NotFound() {
   return (
-    <>
-    <Header/>
-    <div>
+    // <div>
+    //   <h1>404 - Page Not Found</h1>
+    //   <p>The page you are looking for does not exist.</p>
+    // </div>
+    <><div>
     <section className="error_page">
        
         <div className=" flex">
@@ -28,13 +29,3 @@ export default function NotFound() {
 </div><Footer /></>
   );
 }
-
-
-// export default function Custom404() {
-//     return (
-//         <div>
-//             <h1>404 - Page Not Found</h1>
-//             <p>Sorry, the page you're looking for doesn't exist.</p>
-//         </div>
-//     );
-// }
