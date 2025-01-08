@@ -170,11 +170,6 @@ function Plan () {
     };
 
      // Initial quantity state
-  
-
- 
-
- 
 
      const handleQtyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = parseInt(e.target.value, 10); // Parse the input value to a number

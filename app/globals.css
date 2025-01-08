@@ -42022,6 +42022,7 @@ tr .feature{
     -o-transition: all 0.0s ease-in-out;
     transition: all 0.0s ease-in-out;
   }
+
   /* .navigation-menu > ul > li > a:before {
     content: "";
     width: 0;
@@ -42106,7 +42107,8 @@ tr .feature{
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
-  .navigation-menu > ul > li.has-children:hover > .submenu {
+
+  .navigation-menu > ul > li.has-children> .submenu {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -42186,27 +42188,99 @@ tr .feature{
             transition-duration: 0.4s;
     visibility: hidden;
     opacity: 0;
-    min-width: 240px;
+    min-width: 900px;
     padding: 20px 0;
     z-index: 9;
   }
-  .submenu > li {
-    position: relative;
+
+  .submenu-two{
+    background: #ffff;
+    width: 910px;
+    height: 313px;
+    position: absolute;
+    border-radius: 8px;
   }
+
+  .menu-pricing{
+    background-color: #aecaf769;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    color: #1164E9;
+  }
+  .menu-pricing:hover{
+    background-color: #1164E9;
+    color: #fff;
+  }
+
+  .menu-blog-card{
+    width: 215px;
+    position: absolute;
+    border:none !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    top: 18px;
+  }
+  .menu-blog-card h5{
+    font-size: 14px;
+    line-height: 1.2 !important;
+  }
+  .menu-blog-card p{
+    width: 200px;
+  }
+
+  .menu-blog-btn{
+    font-size: 13px;
+    /* color: #fff;
+    background-color:#1164E9; */
+    /* padding: 10px 10px 10px 10px; */
+    /* border-radius: 5px; */
+    position: relative;
+    left: 112px;
+    top: 6px;
+  }
+
+  /* .submenu > li {
+    position: relative;
+  } */
   .submenu > li > a {
-      font-size:14px;
+      font-size:16px;
     display: block;
     padding: 5px 30px;
     color: #273B5E;
-    font-weight: 600;
+    font-weight: 700;
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;
   }
+  .submenu-sub-text{
+    font-weight:400;
+    font-size: 14px;
+    color: #A7A7A7;
+  }
+
+  .box-shadow-menu{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+.box-shadow-menu-two{
+  display: inline-block;
+  vertical-align: top;
+}
+/* .box-shadow-menu li{
+  width: 290px;
+} */
+
+  .box-shadow-menu li:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    /* width: 290px; */
+  }
+
   .submenu > li > a > span {
     position: relative;
   }
-  .submenu > li > a > span:after {
+  /* .submenu > li > a > span:after {
     content: "";
     width: 0;
     height: 1px;
@@ -42219,7 +42293,7 @@ tr .feature{
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-  }
+  } */
   .submenu > li > a:hover {
     color: #086AD8;
   }
@@ -42351,7 +42425,7 @@ tr .feature{
     left: 0;
   }
   
-  /*=========================================
+ /*=========================================
       - Mega Menu Css
   ===========================================*/
   .megamenu {

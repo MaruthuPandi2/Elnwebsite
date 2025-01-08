@@ -4,7 +4,7 @@ import 'animate.css';
 import BootstrapClient from "@/components/boostrapclient";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
-// import "./resposive.css";
+import "./resposive.css";
 import Script from "next/script";
 import Navbar from "@/components/header";
 
@@ -59,7 +59,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         
-    
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

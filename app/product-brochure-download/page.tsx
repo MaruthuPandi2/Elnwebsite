@@ -100,18 +100,18 @@ function Productdownload() {
                   Please submit the form below to immediately access a comprehensive overview of the Product Brochure.
                 </p>
                 <iframe 
-  id="JotFormIFrame-240241711476450" 
-  title="ELN Website ELN Brochure Download form"
-  allowTransparency={true} 
-  allowFullScreen={true} 
-  allow="geolocation; microphone; camera" 
-  // src="https://form.jotform.com/240241711476450?isIframeEmbed=1" 
-  src="https://form.jotform.com/241490785757470"
-  frameBorder="0" 
-   width="100%"
-  className="jotform-iframe3"
-  scrolling="no">
-</iframe>
+                  id="JotFormIFrame-240241711476450" 
+                  title="ELN Website ELN Brochure Download form"
+                  allowTransparency={true} 
+                  allowFullScreen={true} 
+                  allow="geolocation; microphone; camera" 
+                  // src="https://form.jotform.com/240241711476450?isIframeEmbed=1" 
+                  src="https://form.jotform.com/241490785757470"
+                  frameBorder="0" 
+                  width="100%"
+                  className="jotform-iframe3"
+                  scrolling="no">
+                </iframe>
             {/* <iframe 
               id="JotFormIFrame-233192618220450" 
               title="ELN Website ELN Brochure Download form"
@@ -130,7 +130,7 @@ function Productdownload() {
           </div>
         </div>
       </div>
-
+      
   <Footer/>
 
     </>
