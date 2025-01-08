@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // Removed `output: 'export'` for dynamic features
+    
     reactStrictMode: true,
     trailingSlash: true,
     images: {

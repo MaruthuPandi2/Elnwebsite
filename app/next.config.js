@@ -83,11 +83,26 @@
 // module.exports = nextConfig;
 
 
+// import { NextResponse } from 'next/server';
+
+// export function middleware(req) {
+//     // Avoid redirecting valid 404 paths
+//     if (req.nextUrl.pathname === '/404') {
+//         return NextResponse.next();
+//     }
+// }
+
+
 import { NextResponse } from 'next/server';
 
 export function middleware(req) {
-    // Avoid redirecting valid 404 paths
-    if (req.nextUrl.pathname === '/404') {
-        return NextResponse.next();
-    }
+  const { pathname } = req.nextUrl;
+
+  // Allow the /404 route to pass through middleware without redirection
+  if (pathname === '/404') {
+    return NextResponse.next();
+  }
+
+  // Optional: Add custom logic for other paths if needed
+  return NextResponse.next();
 }
