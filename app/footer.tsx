@@ -5,8 +5,8 @@ import { ImTwitter } from "react-icons/im";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { GrYoutube } from "react-icons/gr";
 import Image from "next/image";
-import elnlogofooter from '../../eln/public/assets/images/eln-logo.png'
-import homefooterimag from '../../eln/public/assets/images/home_footer_imag.svg'
+import elnlogofooter from '../public/assets/images/eln-logo.png'
+import homefooterimag from '../public/assets/images/home_footer_imag.svg'
 import  Link  from 'next/link'
 const Footer = () => {
   return (
