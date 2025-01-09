@@ -1,12 +1,11 @@
 
 import Footer from './footer';
+import Header from "@/components/header";
 export default function NotFound() {
   return (
-    // <div>
-    //   <h1>404 - Page Not Found</h1>
-    //   <p>The page you are looking for does not exist.</p>
-    // </div>
-    <><div>
+    <>
+    <Header/>
+    <div>
     <section className="error_page">
        
         <div className=" flex">
@@ -18,9 +17,9 @@ export default function NotFound() {
                 <p className="f_400">
                     We’re sorry, the page you have looked for does not exist in our database!
                 </p>
-                {/* <a href="https://www.logilabeln.com/" className="about_btn btn_hover mt_40 mb_40 ">
+                <a href="https://www.logilabeln.com/" className="about_btn btn_hover mt_40 mb_40 ">
                     Go Back to Home Page
-                </a> */}
+                </a>
             </div>
         </div>
     </section>
@@ -29,3 +28,13 @@ export default function NotFound() {
 </div><Footer /></>
   );
 }
+
+
+// export default function Custom404() {
+//     return (
+//         <div>
+//             <h1>404 - Page Not Found</h1>
+//             <p>Sorry, the page you're looking for doesn't exist.</p>
+//         </div>
+//     );
+// }
